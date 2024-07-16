@@ -1,0 +1,115 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+header div.flex {
+  gap: 1rem;
+}
+header .logo {
+  height: 40px;
+}
+
+header nav {
+  background: var(--bgHeader);
+  border: 1px solid var(--border);
+  border-radius: 55px;
+  box-shadow: 1px 1px 15px 1px var(--hoverBleu);
+  padding: 0.77rem 1.6rem;
+  margin-top: 10px;
+}
+
+ul.flex {
+  gap: 1rem;
+}
+li {
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+li a:hover {
+  color: var(--hoverBleu);
+  opacity: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+header button {
+  /* height: 100px; */
+  font-size: 1.2rem;
+  background: #fff;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+  header button.showMenu {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  button.showMenu {
+    display: none;
+  }
+}
+
+.border {
+  border: 3px solid red;
+}
+
+/*Modal == pop up show Menu  */
+.fixed {
+  position: fixed;
+  /* top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  
+  we can use this inset to declare all the borders like a shurtcut */
+  inset: 0;
+  background: rgba(60, 60, 76, 0.91);
+  /* color: var(--title); */
+}
+header .fixed ul.modal {
+  /* Animation part like zooming  or sliding */
+  scale: 1;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background: var(--secondary-color);
+}
+header .fixed ul.modal li {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.77rem;
+  padding-top: 0.5rem;
+}
+header .fixed ul.modal li:last-child {
+  border-bottom: none;
+}
+
+header .fixed ul.modal li a {
+  font-size: 1rem;
+}
+header .fixed ul.modal li:first-child {
+  text-align: right;
+  border: none;
+  padding-bottom: 0rem;
+  padding-top: 0.2rem;
+}
